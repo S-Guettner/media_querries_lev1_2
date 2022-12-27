@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+    display: grid;
+    grid-template-rows:2.5rem 2.5rem 2.5rem 2.5rem ;
+    /* grid-template-columns: auto  33.3% 33.3% ;
+ } */
+
+body{
+    width: 100vw;
+    overflow: hidden;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 2.5rem 2.5rem 2.5rem 2.5rem;
+    grid-template-columns: 33.3% 33.3% 33.3% ;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+header{
+    background-color: aqua;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+article:nth-of-type(1){
+    background-color: cadetblue;
+}
+
+article:nth-of-type(2){
+    background-color: orange;
+}
+article:nth-of-type(3){
+    background-color: pink;
+    overflow: hidden;
+}
+article:nth-of-type(4){
+    background-color: greenyellow;
+}
+
+aside{
+    background-color:purple;
+    overflow: hidden;
+    height: 5rem;
+}
+
+footer{
+    background-color:rgb(86, 86, 156);
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+@media (max-width: 768px) {
+    main{
+        grid-template-columns: 50% 50% ;
+    }
+
+    aside{
+        grid-column-start: 1;
+        grid-column-end:4;
+        height: 2.5rem;
+        grid-row-start: 2;
+    }
+    
+    article:nth-of-type(1){
+        grid-column-start: 1;
+    }
+    article:nth-of-type(2){
+        
+    }
+    article:nth-of-type(3){
+        grid-row-start: 4;
+    }
+    article:nth-of-type(4){
+        grid-row-start: 4;
+    }
+}
+
+@media (max-width: 576px) {
+    article:nth-of-type(1){
+        height: 2.5rem;
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    article:nth-of-type(2){
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 2.5rem;
+    }
+    article:nth-of-type(3){
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 2.5rem;
+    }
+    article:nth-of-type(4){
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 2.5rem;
+    }
+    footer{
+        height: 2.5rem;
+    }
+    
+}
+
